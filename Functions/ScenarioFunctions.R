@@ -1,4 +1,4 @@
-#24.05.2023
+#03.06.2024
 #this code inludes functions for the creation of many different landscape-level timber production scenarios (Cerullo et al 2023.)
 
 rm(list = ls())
@@ -7,15 +7,9 @@ library(dplyr)
 library(data.table)
 
 
-
-
 #setwd 
 #set the path where scenario outputs will be stored
-folder <- "Outputs"
-
-#TO RUN ON HPC 
-#setwd('/home/grc38/scenarioC')
-#folder <- "/home/grc38/scenarioC/Outputs"
+folder <- "Outputs/MidPointOutputs"
 
 # Load the script with parameters
 source("Scripts/LandscapeParametres.R")

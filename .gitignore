@@ -1,0 +1,23 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+
+# Ignore everything in the project directory except the 'scripts' folder, functions folder, and gitignore 
+/*
+!scripts/
+!Functions/
+!.gitignore
+
+
+
+# Allow R project file
+!*.Rproj
+
+# Allow README file
+!README.md
+.Rdata
+.httr-oauth
+.DS_Store
+.quarto
