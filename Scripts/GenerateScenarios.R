@@ -344,27 +344,10 @@ scenario_composition <- rbindlist(scenarios)
 #=======================================================================
 #4. Save all scenarios for all subsequent analyses#### 
 #=======================================================================
-saveRDS(scenarios, "Outputs/allScenariosStaggered.rds")
+saveRDS(scenarios, "Outputs/MasterAllScenarios.rds")
 J <- scenarios[[12]]
 
 #get parcel composition for each scenario 
 scenario_composition <- rbindlist(scenarios)
 
-# #read.scenarios back in #####
-# 
-# scenario_files<-list.files('ScenarioOutputs/iterations100000/Outputs/',
-#                        pattern = '*.csv',
-#                        full.names = TRUE)
-# scenarios <-lapply(scenario_files, read.csv)
-# 
-# J <- scenarios[[12]]
-# n <- J %>% group_by(production_target) %>%  slice_max(order_by = scenario_filt) %>% 
-#   dplyr::select(production_target, scenario_filt) %>% unique()
-# 
-# #run checks summarising the number of scenarios created 
-# scen_num <- function(x){
-#  x %>%  group_by(production_target) %>%  slice_max(order_by = scenario_filt) %>% 
-#     dplyr::select(production_target, scenario_filt,scenarioName) %>% unique()
-# }
-# num <- lapply(scenarios, scen_num)
-# num <- rbindlist(num)
+
