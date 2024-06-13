@@ -24,6 +24,12 @@ source("Scripts/LandscapeParametres.R")
 source("Functions/ScenarioFunctions.R")
 
 start.time <- Sys.time()
+
+#Inputs ####
+
+#two-comp scenarios 
+twoComp <- readRDS("Outputs/TwoCompartmentScenarios.rds") # add in twoCompartment scenarios - the are the output of the Generate2CompartmentScenarios.R script, so make sure you've run this first
+
 #=======================================================================
 # 1. Build  multi-comparment scenario  ####
 #=======================================================================
@@ -182,6 +188,7 @@ end.time <- Sys.time()
 time.taken <- round(end.time - start.time,2)
 time.taken
 
+#CAN restart code here !!!!!####
 #=================================================
 #2 Read back in multicomp scenarios####
 #=================================================
@@ -191,14 +198,9 @@ scenario_files<-list.files('Outputs/MidPointOutputs',
 scenarios <-lapply(scenario_files, read.csv)
 
 
-#=================================================
-#3. ADD IN TWO COMPARTMENT SCENARIOS ####
-#=================================================
-#two-comp scenarios 
-twoComp <- readRDS("TwoCompartmentScenarios.rds") 
 
 #=================================================
-#4.Post-process and scenario combination (multi- and two-comp) ####
+#3.Post-process and scenario combination (multi- and two-comp) ####
 #=================================================
 
 #define all starting landscapes: 
@@ -278,7 +280,6 @@ combine_scenarios <- function(l1,l2){
 } 
 
 scenarios <- Map(combine_scenarios, scenarios, twoComp)
-J <- scenarios[[13]]
 
 
 #add starting landscape for each scenario 
@@ -341,9 +342,9 @@ scenario_composition <- rbindlist(scenarios)
 
 
 #=======================================================================
-#5. Save all scenarios for all subsequent analyses#### 
+#4. Save all scenarios for all subsequent analyses#### 
 #=======================================================================
-saveRDS(scenarios, "allScenariosStaggered.rds")
+saveRDS(scenarios, "Outputs/allScenariosStaggered.rds")
 J <- scenarios[[12]]
 
 #get parcel composition for each scenario 

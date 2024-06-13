@@ -71,7 +71,7 @@ source("Scripts/LandscapeParametres.R")
 #define number of unique intensities to draw  
 num_draws <- 10
 #define number of iterations (more iterations = more combinatiions per production target)
-num_replications <- 1000
+num_replications <- 100000
 
 
 
