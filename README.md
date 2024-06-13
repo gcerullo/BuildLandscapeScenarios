@@ -15,8 +15,19 @@ This contains the function for generating lots of different scenarios from diffe
 
 #SCRIPTS 
 
+#CalculateYields.R 
+This code provided a replicable backbone for determining the yields of different habitat transitions. 
+It calculates yields likely from harvesting strip-plantated forest. 
+It also calculates yields from staggered harvest of plantations - e.g. where 1/30 of plantations are established in yr1, or yr2 ... to yr30. 
+
+The output is a MasterHabTransition Yields that feeds into the LandscapeParametres.R script, and generates
+scenarios. 
+
+
+
 #LandscapeParametres.R
-Inputs - needs csv definining the yields associated with different habitat transitions. 
+Inputs - needs csv definining the yields associated with different habitat transitions.
+This is produced in CalculateYields.R
 Thereafter this script defines scenario  parametres: 
 including
 #(1) rules for habitat transitions are permitted
