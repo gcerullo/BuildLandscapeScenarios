@@ -20,12 +20,9 @@ library(sampling)
 
 #read in transition yield matrix outline yields from different conversion
 
-#this version assumes all forest -> plantation transitions happen in year 0 
-#yield_matrix <- read_csv("Data/YieldMatrixForTimberProductionSystems.csv") %>% 
-#this version staggers forest -> plantation transtions so that 1/30th happens in each year for first 30 years 
-
-#COME BACK TO THIS IS WRONG ##GCERULLO 15.01.2024
-yield_matrix <- read_csv("Data/YieldMatrixForTimberProductionSystems_STAGGERED.csv") %>% 
+#yield here assume both roundwood and pulp volumes with plantation harvests staggered (ie. established)
+#by 1/30 each year
+yield_matrix <- read_csv("Outputs/MasterHabTransitionYields.csv") %>% 
   
   #add habitat codes 
   mutate(hab_code = case_when(habitat == "primary" ~ 0, 
