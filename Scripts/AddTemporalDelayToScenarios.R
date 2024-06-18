@@ -89,7 +89,7 @@ scenarios <- lapply(scenarios, add_temporal_fun)
 
 ##As RDS ####
 #save all scenarios with time delays included as .rds file 
-saveRDS(scenarios, "Outputs/MasterAllScenarios_withHarvestDelays")
+saveRDS(scenarios, "Outputs/MasterAllScenarios_withHarvestDelays.rds")
 
 ## As Csvs ####
 
