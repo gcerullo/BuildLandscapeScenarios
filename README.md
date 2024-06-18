@@ -6,7 +6,6 @@ scenarioFunctions script.
 Builds many 1Mha landscape level timber production scenarios based on provided parametres 
 
 
-
 #FUNCTIONS
 #ScenarioFunctions.R 
 This contains the function for generating lots of different scenarios from different starting landscapes based on different rulesets. These functions are executed in the GenerateScenarios script
