@@ -22,8 +22,6 @@ It also calculates yields from staggered harvest of plantations - e.g. where 1/3
 The output is a MasterHabTransition Yields that feeds into the LandscapeParametres.R script, and generates
 scenarios. 
 
-
-
 #LandscapeParametres.R
 Inputs - needs csv definining the yields associated with different habitat transitions.
 This is produced in CalculateYields.R
@@ -35,8 +33,14 @@ including
 #all scenarios are 1Mha landscape level scenarios developed for malaysian borneo 
 
 #Generate2CompartmentScenarios.R
-This generates two-compartment scenarios for meeting production targets from different starting landscapes 
+This generates all two compartment scenarios for meeting production targets. Two-compartment scenarios 
+are defined as in the traditional sparing-sharing paradigm, to represent one harvested and one zero-yielding managment type
 
 
 #GenerateScenarios.R
 Using functions from ScenarioFunctions and Parametres defined in LandscapeParametres.R, this code uses a brute-force approach (alike to Cerullo et al. 2023; Biological Conservation) to generate a wide-range of multi-compartment 1Mha landcape level scenarios. It then joins these to the 2-compartment scenarios built in the code above - so be sure to run that script first. 
+
+#AddTemporalDelayToScenarios.R 
+Since our scenarios assume staggered harvests, e.g. 1/30th of total plantation is converted each year, we 
+need to capture the habitat that is present prior to conversion, as this is important for calculating bird, 
+dung beetle, and megatree outcomes. This script adds delays prior to harvests for each scenario
