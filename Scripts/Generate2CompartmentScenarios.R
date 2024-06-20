@@ -7,11 +7,6 @@
 #nb: code for implementing improved (IY) yield plantations is commented out but could be incorporated
 #if we uncomment here, and ammend in ScenarioParemtres script 
 
-#rm(list = ls())
-# library(tidyverse)
-# library(dplyr)
-# library(data.table)
-
 
 # Load the script with parameters and custom functions
 source("Scripts/LandscapeParametres.R")
@@ -45,9 +40,9 @@ comp2 <- crossing(all_twoComp_P,yield_matrix) %>%
                 parcel_yield_gained_10km2_60yrs,
                 current_yields, improved_yields, no_deforestation, deforestation)
 
-#=======================================================================
+
 #get two compartment scenario for each starting landsscape and rule set ####
-#=======================================================================
+
 #function for giving a unique index to each scenario 
 add_unique_index_fun <- function(x){
   x %>%  filter(harvested_parcel_num <1000) %>% 

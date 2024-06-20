@@ -1,9 +1,10 @@
 #03/06/24
 #this code outlines the parametres, including
-#(1) rules for habitat transitions are permitted
-#(2) reads in yields for different habitat transitions 
+#(1) rules for which habitat transitions are permitted
+#(2) reads in yields for different habitat transitions, calculated in CalculateYields.R 
 #(3) defines the starting lanscape composition 
-#all scenarios are 1Mha landscape level scenarios developed for malaysian borneo 
+
+#all scenarios are 1Mha landscape level scenarios developed for Sabah, Borneo 
 
 
 #nb: code for implementing improved (IY) yield plantations is commented out but could be incorporated
@@ -20,8 +21,8 @@ library(sampling)
 
 #read in transition yield matrix outline yields from different conversion
 
-#yield here assume both roundwood and pulp volumes with plantation harvests staggered (ie. established)
-#by 1/30 each year
+#yields here assume both roundwood and pulp volumes
+# plantation harvests staggered (ie. established)  1/30 each year
 yield_matrix <- read_csv("Outputs/MasterHabTransitionYields.csv") %>% 
   
   #add habitat codes 
