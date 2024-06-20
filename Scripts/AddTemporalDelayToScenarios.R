@@ -93,8 +93,8 @@ saveRDS(scenarios, "Outputs/MasterAllScenarios_withHarvestDelays.rds")
 
 ## As Csvs ####
 
-# save all scenarios with time delays, where each scenario type is saved as its own csv
-# We do this because in later post-processing, to increase memory allocation, we will process each scenario type  seperately 
+# save all scenarios with time delays, where each scenario set is saved as its own csv
+# We do this because in later post-processing, to improve memory allocation, we will process each scenario set  seperately 
 
 
 # Assuming your list of tibbles is called `scenarios`
