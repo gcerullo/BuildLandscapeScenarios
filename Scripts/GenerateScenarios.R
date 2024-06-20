@@ -7,17 +7,15 @@
 #5. saves all scenarios for use in subsequent analyses
 
 #RUN SCENARIOS; 
-#this code will run the multi-comparment scenarios for my different starting landscape and rule combinations. Landscapes and different rules are explained in the 
-#parametres script. The main function createScenarios() generates lots of multi-comp scenarios for different production target, starting landscapes and  and rules. 
+#this code will run the multi-comparment scenarios for my different starting landscape and rule combinations.
+#Landscapes and different rules are explained in the LandscapeParametre.R script. 
+#The main function createScenarios() generates lots of multi-comp scenarios for different production targets, 
+#starting landscapes and  and rules. 
 
 #nb: code for implementing improved (IY) yield plantations is commented out but could be incorporated
 #if we uncomment here, and ammend in ScenarioParemtres script 
 
 #information on how custom functions operate can be found in the ScenarioFunctions scripts
-rm(list = ls())
-# library(tidyverse)
-# library(dplyr)
-# library(data.table)
 
 # Load the script with parameters and custom functions
 source("Scripts/LandscapeParametres.R")
