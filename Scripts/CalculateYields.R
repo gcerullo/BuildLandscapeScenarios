@@ -21,7 +21,9 @@ library(tidyverse)
 #Primary -> twice-logged -> 112.96 + 31.24 =  144.2 m3/ha #Fisher et al 2009
 
 #Once-logged -> once-logged -> 0
+#Once-logged -> twice-logged -> 31.24   #Fisher et al 2009
 #Once-logged -> restored -> 40.76148 m3/ha (see how SP_timber is derived below)
+
 
 #Twice-logged -> twice-logged 0 
 
