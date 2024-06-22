@@ -192,7 +192,7 @@ TwiceLoggedClearance+eucYields
 
 
 #Bring together plantation and forest data ####
-#The above derivations of yields is shown for replicability 
+#The above derivations of yields are shown for replicability 
 #Now read in these vals as CSV and combine to make Master output 
 
 #READ IN FOREST-FOREST transition YIELDs - where all forest yields are derived as above
