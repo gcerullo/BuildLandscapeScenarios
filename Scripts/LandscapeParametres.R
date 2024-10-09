@@ -1,4 +1,4 @@
-#03/06/24 c
+#03/06/24 
 #this code outlines the parametres, including
 #(1) rules for which habitat transitions are permitted
 #(2) reads in yields for different habitat transitions, calculated in CalculateYields.R 

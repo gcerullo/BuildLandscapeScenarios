@@ -378,7 +378,7 @@ CreateScenarios <- function(P, startLandscape_rules, scenarioName){
   #temporarily write csv - alter this to add scenario string name automatically 
   #  write.csv(scenarios, scenarioName)
   
-  print("All done you clever bastard")
+  print("All done. Congrats on being a good egg!")
   
   #END OF MASTER createScenarios function
 }
