@@ -1,5 +1,5 @@
 # 1. BuildLandscapeScenarios
-Ths project g Builds many 1Mha landscape level timber production scenarios based on provided parametres 
+Ths project builds many 1Mha landscape level timber production scenarios based on provided parametres 
 
 Inputs: 
 ForestYields - showing forest yields from different forest-forest transitions (0-yielding transitions require a non-zero value, so add a nominal decimal)
