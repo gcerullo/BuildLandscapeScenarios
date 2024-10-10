@@ -1,12 +1,12 @@
 # 1. BuildLandscapeScenarios
-Ths project generates many different scenarios. 
+Ths project g Builds many 1Mha landscape level timber production scenarios based on provided parametres 
 
 Inputs: 
 ForestYields - showing forest yields from different forest-forest transitions (0-yielding transitions require a non-zero value, so add a nominal decimal)
-Plantation yields - showing yields from plantations, including from forest conversion. 
-HabByYears - showing the functional habitat type and age for each true year of a habitat transition.
 
-Builds many 1Mha landscape level timber production scenarios based on provided parametres 
+Plantation yields - showing yields from plantations, including from forest conversion. 
+
+HabByYears - showing the functional habitat type and age for each true year of a habitat transition.
 
 
 #FUNCTIONS
@@ -14,8 +14,7 @@ Builds many 1Mha landscape level timber production scenarios based on provided p
 This contains the function for generating lots of different scenarios from different starting landscapes based on different rulesets. These functions are executed in the GenerateScenarios script
 
 
-
-#SCRIPTS 
+#SCRIPTS - to be run in this order. Note that the R.project should have a folders associates with it called Inputs, Outputs, Scripts, Functions, Data. 
 
 #CalculateYields.R 
 Output: MasterHabTransitionYields.csv
