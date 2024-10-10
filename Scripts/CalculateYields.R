@@ -129,7 +129,6 @@ TwiceLoggedClearance <- (TwiceLoggedClearanceRW*pulpCF_logged) + TwiceLoggedClea
 
 
 #3. Calculate plantation yields ####
-#Nb all of these vals are manually inputted in a csv 
 
 #If all plantation were established in the first year of my scenarios then they would generate timber for ~60 yrs
 #based on the allocation where I average annual plantation yields across the scenario 
@@ -144,7 +143,6 @@ MAI_euc*60  #914.4 m3 of eucalyptus over 60 years
 #(B) All plantation conversion happens evenly across the first 30 years (i.e. 1/30th of conversion in each year)
 
 #Thus annual timber flows from staggered plantation establishment can be calculated as follows:  
-
 
 # Let's assume the oldest plantation (established in yr 0 can be running for 60 yrs), whereas the most 
 #recently established plantation (established in yr 30 can run for only 30 or so yrs)
