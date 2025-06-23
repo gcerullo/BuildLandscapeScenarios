@@ -9,7 +9,7 @@ library(tidyverse)
 
 
 #  ---------Define logging transitions -----------------
-#Note that for strip-planting treatments, we have to make a decision. 
+#Note that for strip-planting treatments: 
 # (A) If only the 28% enrichment planted area is reharvested then this = 40.76148m3/ha  (see SP_timber derivation)
 # (B) If for stripPlanting we assume the enricment planting area is reharvested AND we log for a second time the ~72% of once-logged naturally regenerating forest, then we get  63.07576 m3/ha (see totalSP_timber derivation)
 
@@ -47,8 +47,8 @@ salvageYields <- 24.46 #m3/ha from Fischer et al 2009
 
 #(A) Calculate conversion factor 
 
-#According to Ruslandi et al. 30 yr old strip-planted forest (L60L40SP) 
-#has an AGB of 380 Mg/ha and 140m3 of merchantable timber. #
+#According to Ruslandi et al. 2017 30 yr old strip-planted forest (L60L40SP) 
+#has an AGB of 380 Mg/ha and produces 140m3 of merchantable timber. #
 
 #Calculate Ruslandi-et-al-derived conversion factor
 #convert AGB to ACD
@@ -61,7 +61,7 @@ convFact <- ACD_30yrStripPlanted/140
 # ACD from treatment 
 
 #ACD after 30 years 
-NR_ACD_30 <- yr0_ACD + (NR_ACD * yrs_until_reharvest)  #ACD afer 30yrs
+NR_ACD_30 <- yr0_ACD + (NR_ACD * yrs_until_reharvest)  #ACD after 30yrs
 SP_ACD_30 <- yr0_ACD + (SP_ACD * yrs_until_reharvest) #Mg/ha  
 
 #convert ACD after 30 years to timber available using conversion factor 
@@ -80,7 +80,6 @@ nonSP_timber <- 31.24 * (1- 0.285714286)
 totalSP_timber <- SP_timber + nonSP_timber
 
 
-
 #--------Define plantation transitions -----------------
 #deforested -> albizia 797,160 (m3/10km2/60yr) - see albYields derivation below
 #deforested -> eucalyptus 693,420 (m3/10km2/60yr) - see eucYields derivation below 
@@ -95,7 +94,6 @@ totalSP_timber <- SP_timber + nonSP_timber
 
 #NB - if we want we can also include what would happen if we improved management in each plantation system 
 #we just also need to provide yields under improved plantation management
-
 
 #Define plantation params #### 
 
@@ -189,9 +187,8 @@ TwiceLoggedClearance+albYields
 TwiceLoggedClearance+eucYields
 
 
-
 #Bring together plantation and forest data ####
-#The above derivations of yields are shown for replicability 
+#The above derivations of yields are shown for reproducability 
 #Now read in these vals as CSV and combine to make Master output 
 
 #READ IN FOREST-FOREST transition YIELDs - where all forest yields are derived as above

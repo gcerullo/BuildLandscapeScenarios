@@ -2,11 +2,10 @@
 
 #this code outlines the parametres, including
 #(1) rules for which habitat transitions are permitted
-#(2) reads in yields for different habitat transitions, calculated in CalculateYields.R 
-#(3) defines the starting lanscape composition 
+#(2) reads in yields for different habitat transitions, calculated in 01_CalculateYields.R 
+#(3) defines the starting landscape composition 
 
 #all scenarios are 1Mha landscape level scenarios developed for Sabah, Borneo 
-
 
 #nb: code for implementing improved (IY) yield plantations is commented out but could be incorporated
 #if we included these values in the YieldMatrix read-in
